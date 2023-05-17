@@ -15,7 +15,7 @@ Configurar la base de datos: Asegúrese de tener MySQL instalado y configurado e
 Configurar el backend: Abra el proyecto en un entorno de desarrollo Java compatible. Asegúrese de tener las dependencias necesarias descargadas y configuradas. Puede utilizar una herramienta como Maven o Gradle para administrar las dependencias y compilar el proyecto.
 
 Configurar el frontend: Abra la carpeta "frontend" en un editor de código compatible con JavaScript. Ejecute el comando npm install para instalar las dependencias necesarias. Luego, ejecute el comando 
-```npm start ```
+```npm start```
 para iniciar el servidor de desarrollo.
 
 Acceder a la aplicación: Una vez que el backend y el frontend estén en funcionamiento, puede acceder a la aplicación en su navegador web mediante la URL proporcionada por el servidor de desarrollo de React.
