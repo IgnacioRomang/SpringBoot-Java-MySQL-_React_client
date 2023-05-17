@@ -6,7 +6,8 @@ Instrucciones de uso:
 Para utilizar este proyecto, se recomienda seguir los siguientes pasos:
 
 Clonar el repositorio: Puede clonar el repositorio utilizando el comando 
-```git clone https://github.com/IgnacioRomang/SpringBoot-Java-MySQL-_React_client.git.
+```git
+git clone https://github.com/IgnacioRomang/SpringBoot-Java-MySQL-_React_client.git.
 ```
 
 Configurar la base de datos: Asegúrese de tener MySQL instalado y configurado en su entorno local. Ejecute los scripts SQL proporcionados en el repositorio para crear la base de datos y las tablas necesarias.
