@@ -1,11 +1,10 @@
 package com.example.ejemplo.Managers;
 
-import java.util.List;
-
-import com.example.ejemplo.models.UnAssignedTask;
-import com.example.ejemplo.models.User;
-
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import com.example.ejemplo.models.User;
 
 public class UserManager {
     private static UserManager instanceUserManager;
@@ -29,10 +28,12 @@ public class UserManager {
         return new User(name, email);
     }
 
-    public boolean removeUser(int id){
+    public boolean removeUser(int id) {
         boolean result = false;
-        if(this.users != null && !this.users.isEmpty()){
-            result = 
+        if (this.users != null && !this.users.isEmpty()) {
+            // TODO Mejorar
+            List<User> finds = this.users.stream().filter(x -> x.getId() != id).collect(Collectors.toList());
+            users = finds;
         }
         return result;
     }

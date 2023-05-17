@@ -3,7 +3,21 @@ package com.example.ejemplo.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.OnDelete;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     public int getId() {
@@ -13,7 +27,6 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
-
     private String name;
 
     public String getName() {
@@ -34,6 +47,7 @@ public class User {
         this.email = email;
     }
 
+    @OneToMany(mappedBy = "ASSIGNEDTASK", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<AssignedTask> assignedTasks;
 
     public List<AssignedTask> getAssignedTasks() {
@@ -44,6 +58,7 @@ public class User {
         this.assignedTasks = assignedTasks;
     }
 
+    @OneToMany(mappedBy = "FINISHEDTASK", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FinishedTask> finishedTasks;
 
     public User(int id, String name, String email) {
@@ -51,11 +66,13 @@ public class User {
         this.name = name;
         this.email = email;
     }
+
     public User(String name, String email) {
         this.name = name;
         this.email = email;
-    }    
-    public User(int id, String name, String email,List<FinishedTask> finishedTasks,List<AssignedTask> assignedTasks) {
+    }
+
+    public User(int id, String name, String email, List<FinishedTask> finishedTasks, List<AssignedTask> assignedTasks) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -70,28 +87,32 @@ public class User {
     public void setFinishedTasks(List<FinishedTask> finishedTasks) {
         this.finishedTasks = finishedTasks;
     }
-    public void addNewAssignedTask(AssignedTask task){
-        if(this.assignedTasks == null){
+
+    public void addNewAssignedTask(AssignedTask task) {
+        if (this.assignedTasks == null) {
             this.assignedTasks = new ArrayList<AssignedTask>();
         }
         this.assignedTasks.add(task);
     }
-    public void addNewFinishedTask(FinishedTask task){
-        if(this.finishedTasks == null){
+
+    public void addNewFinishedTask(FinishedTask task) {
+        if (this.finishedTasks == null) {
             this.finishedTasks = new ArrayList<FinishedTask>();
         }
         this.finishedTasks.add(task);
     }
-    public boolean removeAssigenedTask(AssignedTask task){
+
+    public boolean removeAssigenedTask(AssignedTask task) {
         boolean result = false;
-        if(this.assignedTasks !=null){
+        if (this.assignedTasks != null) {
             result = this.assignedTasks.remove(task);
         }
         return result;
     }
-    public boolean removeFinishedTask(FinishedTask task){
+
+    public boolean removeFinishedTask(FinishedTask task) {
         boolean result = false;
-        if(this.finishedTasks !=null){
+        if (this.finishedTasks != null) {
             result = this.finishedTasks.remove(task);
         }
         return result;

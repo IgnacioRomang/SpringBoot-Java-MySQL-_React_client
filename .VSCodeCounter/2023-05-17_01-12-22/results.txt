@@ -1,0 +1,59 @@
+Date : 2023-05-17 01:12:22
+Directory : d:\Proyects\ejemplo\src
+Total : 18 files,  463 codes, 1 comments, 133 blanks, all 597 lines
+
+Languages
++-----------------+------------+------------+------------+------------+------------+
+| language        | files      | code       | comment    | blank      | total      |
++-----------------+------------+------------+------------+------------+------------+
+| Java            |         17 |        457 |          1 |        133 |        591 |
+| Java Properties |          1 |          6 |          0 |          0 |          6 |
++-----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                  | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                     |         18 |        463 |          1 |        133 |        597 |
+| main                                                                                                  |         17 |        454 |          1 |        128 |        583 |
+| main\java                                                                                             |         16 |        448 |          1 |        128 |        577 |
+| main\java\com                                                                                         |         16 |        448 |          1 |        128 |        577 |
+| main\java\com\example                                                                                 |         16 |        448 |          1 |        128 |        577 |
+| main\java\com\example\ejemplo                                                                         |         16 |        448 |          1 |        128 |        577 |
+| main\java\com\example\ejemplo (Files)                                                                 |          1 |          9 |          0 |          5 |         14 |
+| main\java\com\example\ejemplo\Controllers                                                             |          4 |        119 |          0 |         25 |        144 |
+| main\java\com\example\ejemplo\Managers                                                                |          2 |         72 |          1 |         17 |         90 |
+| main\java\com\example\ejemplo\Repositories                                                            |          4 |         28 |          0 |         18 |         46 |
+| main\java\com\example\ejemplo\models                                                                  |          5 |        220 |          0 |         63 |        283 |
+| main\resources                                                                                        |          1 |          6 |          0 |          0 |          6 |
+| test                                                                                                  |          1 |          9 |          0 |          5 |         14 |
+| test\java                                                                                             |          1 |          9 |          0 |          5 |         14 |
+| test\java\com                                                                                         |          1 |          9 |          0 |          5 |         14 |
+| test\java\com\example                                                                                 |          1 |          9 |          0 |          5 |         14 |
+| test\java\com\example\ejemplo                                                                         |          1 |          9 |          0 |          5 |         14 |
++-------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| filename                                                                                              | language        | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Controllers\AssignedTaskController.java         | Java            |         46 |          0 |         10 |         56 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Controllers\FinishedTaskController.java         | Java            |         30 |          0 |          5 |         35 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Controllers\UnAssignedTaskController.java       | Java            |         34 |          0 |          7 |         41 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Controllers\UserController.java                 | Java            |          9 |          0 |          3 |         12 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Managers\TaskManager.java                       | Java            |         40 |          0 |          8 |         48 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Managers\UserManager.java                       | Java            |         32 |          1 |          9 |         42 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\ProyectJavaSpringBootReactApplication.java      | Java            |          9 |          0 |          5 |         14 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Repositories\AssignedTaskRepository.java        | Java            |          7 |          0 |          4 |         11 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Repositories\FinishedTaskRepository.java        | Java            |          7 |          0 |          5 |         12 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Repositories\UnAssignedTaskRepository.java      | Java            |          7 |          0 |          5 |         12 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Repositories\UserRepository.java                | Java            |          7 |          0 |          4 |         11 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\AssignedTask.java                        | Java            |         31 |          0 |         13 |         44 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\FinishedTask.java                        | Java            |         22 |          0 |          7 |         29 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\Task.java                                | Java            |         62 |          0 |         17 |         79 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\UnAssignedTask.java                      | Java            |         23 |          0 |          8 |         31 |
+| d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\User.java                                | Java            |         82 |          0 |         18 |        100 |
+| d:\Proyects\ejemplo\src\main\resources\application.properties                                         | Java Properties |          6 |          0 |          0 |          6 |
+| d:\Proyects\ejemplo\src\test\java\com\example\ejemplo\ProyectJavaSpringBootReactApplicationTests.java | Java            |          9 |          0 |          5 |         14 |
+| Total                                                                                                 |                 |        463 |          1 |        133 |        597 |
++-------------------------------------------------------------------------------------------------------+-----------------+------------+------------+------------+------------+
