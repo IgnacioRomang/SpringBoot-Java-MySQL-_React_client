@@ -3,16 +3,12 @@ package com.example.ejemplo.models;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.OnDelete;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
-
 
 @Entity
 public class User {
@@ -27,6 +23,7 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
+
     private String name;
 
     public String getName() {
@@ -47,7 +44,7 @@ public class User {
         this.email = email;
     }
 
-    @OneToMany(mappedBy = "ASSIGNEDTASK", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "assignedUser", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<AssignedTask> assignedTasks;
 
     public List<AssignedTask> getAssignedTasks() {
@@ -58,7 +55,7 @@ public class User {
         this.assignedTasks = assignedTasks;
     }
 
-    @OneToMany(mappedBy = "FINISHEDTASK", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "assignedUser", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FinishedTask> finishedTasks;
 
     public User(int id, String name, String email) {
