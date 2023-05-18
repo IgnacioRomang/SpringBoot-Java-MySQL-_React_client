@@ -28,23 +28,23 @@ public class AssignedTaskController {
     @Autowired
     private UnAssignedTaskRepository unAssignedTaskRepository;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAll", method = RequestMethod.GET)
     public List<AssignedTask> getTasks() {
         return this.assignedTaskRepository.findAll();
     }
 
-    @PostMapping("/")
+    @PostMapping("/assign")
     public AssignedTask assignTask(@RequestBody UnAssignedTask task, @RequestBody User user) {
         unAssignedTaskRepository.delete(task);
         return assignedTaskRepository.save(TaskManager.getInstance().assignTask(task, user));
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/getById", method = RequestMethod.GET)
     public AssignedTask getAssignedTaskByID(@RequestParam int id) {
         return assignedTaskRepository.findById(id).orElseThrow(null);
     }
 
-    @PutMapping("/")
+    @PutMapping("/reAssign")
     public AssignedTask reAssignTask(@RequestBody AssignedTask task, @RequestBody User user) {
         AssignedTask taskOutDated = assignedTaskRepository.findById(task.getId()).orElseThrow(null);
         taskOutDated.setAssignedUser(user);

@@ -1,0 +1,19 @@
+import axios from 'axios';
+import React, { useState,useEffect } from 'react'
+
+const [UnAssignedTasks, setUnAssignedtasks] = useState("");
+const [UnAssignedTask, setUnAssignedtask] = useState("")
+
+useEffect(() => {
+    getUnAssignedTasks();
+}, [])
+
+export const getUnAssignedTasks = async () => {
+    const res = await axios.get("http://localhost:8080/api/getAll");
+    setUnAssignedtasks(res.data);
+}
+
+export const createUnAssignedTaks = async(name,description) => {
+    await axios.post("http://localhost:8080/api/task",{name:name,description:description});
+    getTasks();
+  }  

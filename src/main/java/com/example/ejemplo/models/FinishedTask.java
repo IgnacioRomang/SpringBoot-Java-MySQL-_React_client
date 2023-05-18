@@ -4,7 +4,7 @@ import java.sql.Date;
 
 import jakarta.persistence.Entity;
 
-@Entity
+@Entity(name="finishedtask")
 public class FinishedTask extends AssignedTask {
     private Date finishedDate;
 
