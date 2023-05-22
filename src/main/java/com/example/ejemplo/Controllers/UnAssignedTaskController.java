@@ -17,7 +17,7 @@ import com.example.ejemplo.Repositories.UnAssignedTaskRepository;
 import com.example.ejemplo.models.UnAssignedTask;
 
 @RestController
-@RequestMapping("api/Task")
+@RequestMapping("api/UnAssignedTask")
 @CrossOrigin()
 public class UnAssignedTaskController {
     @Autowired

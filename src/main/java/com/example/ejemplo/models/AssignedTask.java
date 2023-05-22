@@ -15,34 +15,34 @@ import jakarta.persistence.Table;
 public class AssignedTask extends Task {
     private Date assignedDate;
 
-    public Date getAssignedDate() {
-        return assignedDate;
-    }
-
-
-    public void setAssignedDate(Date assignedDate) {
-        this.assignedDate = assignedDate;
-    }
     @ManyToOne()
     @JoinColumn(name = "assignedUser")
     private User assignedUser;
 
-    public User getAssignedUser() {
-        return assignedUser;
-    }
-    
+
     public AssignedTask(int id, int priority, String descriptioString, String reporterEmail, Date reportDate,
             Date assignedDate, User assignedUser) {
         super(id, priority, descriptioString, reporterEmail, reportDate);
         this.assignedDate = assignedDate;
         this.assignedUser = assignedUser;
     }
-
-
     public AssignedTask(UnAssignedTask task, Date assignedDate, User assignedUser) {
         super(task.getId(), task.getPriority(), task.getDescriptioString(), task.getReporterEmail(), task.getReportDate());
         this.assignedDate = assignedDate;
         this.assignedUser = assignedUser;
+    }
+
+    public Date getAssignedDate() {
+        return assignedDate;
+    }
+    
+    public void setAssignedDate(Date assignedDate) {
+        this.assignedDate = assignedDate;
+    }
+
+
+    public User getAssignedUser() {
+        return assignedUser;
     }
 
     public void setAssignedUser(User assignedUser) {

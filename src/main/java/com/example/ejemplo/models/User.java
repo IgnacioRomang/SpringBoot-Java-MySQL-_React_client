@@ -16,44 +16,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     private String name;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     private String email;
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     @OneToMany(mappedBy = "assignedUser", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<AssignedTask> assignedTasks;
-
-    public List<AssignedTask> getAssignedTasks() {
-        return assignedTasks;
-    }
-
-    public void setAssignedTasks(List<AssignedTask> assignedTasks) {
-        this.assignedTasks = assignedTasks;
-    }
 
     @OneToMany(mappedBy = "assignedUser", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<FinishedTask> finishedTasks;
@@ -75,6 +43,38 @@ public class User {
         this.email = email;
         this.assignedTasks = assignedTasks;
         this.finishedTasks = finishedTasks;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<AssignedTask> getAssignedTasks() {
+        return assignedTasks;
+    }
+
+    public void setAssignedTasks(List<AssignedTask> assignedTasks) {
+        this.assignedTasks = assignedTasks;
     }
 
     public List<FinishedTask> getFinishedTasks() {
