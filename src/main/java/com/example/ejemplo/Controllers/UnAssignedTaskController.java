@@ -1,6 +1,7 @@
 package com.example.ejemplo.Controllers;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,32 +10,38 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.ejemplo.Repositories.UserRepository;
-import com.example.ejemplo.models.User;
+import com.example.ejemplo.Repositories.UnAssignedTaskRepository;
+import com.example.ejemplo.models.UnAssignedTask;
 
 @RestController
-@RequestMapping("api/")
+@RequestMapping("api/UnAssignedTask")
 @CrossOrigin()
-public class UserController {
+public class UnAssignedTaskController {
     @Autowired
-    private UserRepository repository;
+    private UnAssignedTaskRepository repository;
 
     @PostMapping("/")
-    public Map<String, Boolean> createUser(@RequestBody User user) {
-        repository.save(user);
+    public Map<String, Boolean> createTask(@RequestBody UnAssignedTask task) {
+        repository.save(task);
         Map<String, Boolean> response = new HashMap<>();
         response.put("saved", Boolean.TRUE);
         return response;
     }
-    
+
     @DeleteMapping("/")
-    public Map<String, Boolean> deleteUser(@RequestBody User user) {
-        User userD = repository.findById(user.getId()).orElseThrow();
-        repository.delete(userD);
+    public Map<String, Boolean> deleteTask(@RequestBody UnAssignedTask taskD) {
+        UnAssignedTask task = repository.findById(taskD.getId()).orElseThrow();
+        repository.delete(task);
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
         return response;
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public List<UnAssignedTask> getUnAssignedTasks() {
+        return this.repository.findAll();
     }
 }

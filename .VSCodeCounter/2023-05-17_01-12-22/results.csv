@@ -1,0 +1,20 @@
+"filename", "language", "Java", "Java Properties", "comment", "blank", "total"
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Controllers\AssignedTaskController.java", "Java", 46, 0, 0, 10, 56
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Controllers\FinishedTaskController.java", "Java", 30, 0, 0, 5, 35
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Controllers\UnAssignedTaskController.java", "Java", 34, 0, 0, 7, 41
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Controllers\UserController.java", "Java", 9, 0, 0, 3, 12
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Managers\TaskManager.java", "Java", 40, 0, 0, 8, 48
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Managers\UserManager.java", "Java", 32, 0, 1, 9, 42
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\ProyectJavaSpringBootReactApplication.java", "Java", 9, 0, 0, 5, 14
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Repositories\AssignedTaskRepository.java", "Java", 7, 0, 0, 4, 11
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Repositories\FinishedTaskRepository.java", "Java", 7, 0, 0, 5, 12
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Repositories\UnAssignedTaskRepository.java", "Java", 7, 0, 0, 5, 12
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\Repositories\UserRepository.java", "Java", 7, 0, 0, 4, 11
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\AssignedTask.java", "Java", 31, 0, 0, 13, 44
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\FinishedTask.java", "Java", 22, 0, 0, 7, 29
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\Task.java", "Java", 62, 0, 0, 17, 79
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\UnAssignedTask.java", "Java", 23, 0, 0, 8, 31
+"d:\Proyects\ejemplo\src\main\java\com\example\ejemplo\models\User.java", "Java", 82, 0, 0, 18, 100
+"d:\Proyects\ejemplo\src\main\resources\application.properties", "Java Properties", 0, 6, 0, 0, 6
+"d:\Proyects\ejemplo\src\test\java\com\example\ejemplo\ProyectJavaSpringBootReactApplicationTests.java", "Java", 9, 0, 0, 5, 14
+"Total", "-", 457, 6, 1, 133, 597
